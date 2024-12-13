@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+  <script>
+    // Incorrectly accessing the div element
+    let divElement = document.getElementByIdx("myDiv"); //Typo here
+
+    if (divElement) {
+      divElement.innerHTML = "<p>Text changed!</p>";
+    } else {
+      console.error("Element not found!");
+    }
+  </script>
+</body>
+</html>
